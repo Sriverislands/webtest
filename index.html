@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Webテスト対策トレーナー</title>
+ <link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#3949ab">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Webテスト">
 <style>
 :root{--bg:#f2f4f9;--card:#fff;--ink:#1e2633;--sub:#69758a;--acc:#3949ab;--accL:#e8eaf6;--ok:#2e9e5b;--okL:#e6f5ec;--ng:#d64545;--ngL:#fbeaea;--line:#dfe4ee}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -669,6 +675,7 @@ function applyImport(txt){try{const d=JSON.parse(txt);if(!d||typeof d!=="object"
 
 route("home");
 fbInit();
+ if("serviceWorker" in navigator&&location.protocol==="https:")navigator.serviceWorker.register("./sw.js").catch(()=>{});
 </script>
 </body>
 </html>
