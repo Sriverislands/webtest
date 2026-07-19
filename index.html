@@ -967,7 +967,15 @@ function renderStats(){
 }
 
 /* ---- Firebase 同期（Googleアカウント） ---- */
-const FB_CONFIG=null; /* ←セットアップ手順書 STEP4：ここをFirebaseの設定オブジェクトに置き換える */
+const FB_CONFIG={
+  apiKey: "AIzaSyBm5B-20fUim1mNdxENE5y_J-yWNHzS7DM",
+  authDomain: "webtest-195d1.firebaseapp.com",
+  projectId: "webtest-195d1",
+  storageBucket: "webtest-195d1.firebasestorage.app",
+  messagingSenderId: "383562783423",
+  appId: "1:383562783423:web:0a509c36e9d655558f440a",
+  measurementId: "G-580J4VF24L"
+}; /* ←セットアップ手順書 STEP4：ここをFirebaseの設定オブジェクトに置き換える */
 let fbUser=null,fbLoaded=false,pushT=null,lastSync="";
 function fbScript(src){return new Promise((res,rej)=>{const s=document.createElement("script");s.src=src;s.onload=res;s.onerror=rej;document.head.appendChild(s)})}
 async function fbInit(){
