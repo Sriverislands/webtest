@@ -1,7 +1,7 @@
 /* Webテスト対策トレーナー service worker
    方式: cache-first + バックグラウンド更新（stale-while-revalidate）
    アプリを更新したら下のバージョン番号を上げること（例: v1 → v2）。 */
-const CACHE = "webtest-v1";
+const CACHE = "webtest-v2";
 const ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./icon-180.png"];
 
 self.addEventListener("install", e => {
